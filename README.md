@@ -21,12 +21,8 @@ All the categorical features present a `wide cardinality domain`, in a range bet
 Another key aspect regards the predictor `quality`. It is normally distributed on the interval [0,100] (Figure 1), whereas the median 50th percentile lays on 46. In order to detect the outliers, it has been used the `1.5IQR` Rule}, that allows to define the minimum and maximum thresholds beyond which we consider the data points as outliers. 
 
 <p align="center">
-  <img src="https://bit.ly/3bMbPp5" align="center" border="0" alt="\begin{equation}\begin{split}    min &= Q_1 - 1.5 (Q_3 - Q_1) = 12.5 \\    max &= Q_3 + 1.5 (Q_3 - Q_1) = 80.5\end{split}\end{equation}" width="294" height="43" />
-</p> 
-
-<p align="center">
-  <img src="images/quality_image.svg" height="350">
-</p> 
+  <img src="https://github.com/francescodisalvo05/Twitter-Black-Lives-Matter-SA/blob/main/images/tf-idf.png" align="center" border="0" alt="TF-IDF(t) = freq(t,d) \times \log{\frac{m}{freq(t,D)}}" width="326" height="43" />
+</p>
  
  
 `Q_1` and `Q_3` are the first and the third quantile, respectively. This technique allowed to discover $4\,972$ outliers. In order to verify if they can be considered as outliers or not, we inspected two random descriptions with quality `0` and `100` : 
