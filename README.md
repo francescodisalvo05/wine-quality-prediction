@@ -21,9 +21,12 @@ All the categorical features present a `wide cardinality domain`, in a range bet
 Another key aspect regards the predictor `quality`. It is normally distributed on the interval [0,100] (Figure 1), whereas the median 50th percentile lays on 46. In order to detect the outliers, it has been used the `1.5IQR` Rule}, that allows to define the minimum and maximum thresholds beyond which we consider the data points as outliers. 
 
 <p align="center">
-  <img src="https://github.com/francescodisalvo05/Twitter-Black-Lives-Matter-SA/blob/main/images/tf-idf.png" align="center" border="0" alt="TF-IDF(t) = freq(t,d) \times \log{\frac{m}{freq(t,D)}}" width="326" height="43" />
-</p>
- 
+  <img src="images/iqr.jpg">
+</p> 
+
+<p align="center">
+  <img src="images/quality_image.svg" height="350">
+</p> 
  
 `Q_1` and `Q_3` are the first and the third quantile, respectively. This technique allowed to discover $4\,972$ outliers. In order to verify if they can be considered as outliers or not, we inspected two random descriptions with quality `0` and `100` : 
  *  0 : "Clean as anyone should reasonably expect given the almost unheard-of price. Drink it now; cook with it; make a sangria with it. Just enjoy it."
@@ -66,7 +69,7 @@ The lemmatization technique is really effective in Natural Language Processing (
 The weight of each token has been measured with the term frequency-inverse document frequency (TF-IDF), defined as follows:
 
 <p align="center">
-  <img src="https://bit.ly/3yBFtas" align="center" border="0" alt="TF-IDF(t) = freq(t,d) \times \log{\frac{m}{freq(t,D)}}" width="326" height="43" />
+  <img src="images/tf-idf.png" align="center" border="0" alt="TF-IDF(t) = freq(t,d) \times \log{\frac{m}{freq(t,D)}}" width="326" height="43" />
 </p>
 
 where `t` is the token, `d` is the current document, and `D` is the collection of `m` documents.  The idea of the TF-IDF is to stand out tokens that occur frequently in a single document, but rarely on the entire collections of documents.  In particular, instead of extracting single tokens, we considered the 4-grams, that are subsequences of 4 tokens. In Figure 4 it is showed how the naive TfidfVectorizer (provided by Scikit-learn) works with the following phrases:  
